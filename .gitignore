@@ -1,0 +1,53 @@
+# ========================== 编译产物==========================
+# 编译输出目录（全部忽略，产物集中在这里）
+/output/
+# 源文件目录下可能生成的目标文件、依赖文件
+/src/*.o
+/src/*.obj
+/src/*.d
+/src/*.pdb
+# 根目录可能生成的可执行文件（Windows/Linux/macOS）
+*.exe
+*.exe.stackdump
+*.out
+a.out
+# 静态库/动态库（如果lib目录是本地编译生成，而非第三方源码，需忽略）
+/lib/*.a
+/lib/*.lib
+/lib/*.so
+/lib/*.so.*
+/lib/*.dll
+/lib/*.dylib
+
+# ========================== 编辑器/IDE 配置 ==========================
+# VS Code：忽略本地缓存，保留核心共享配置
+.vscode/*
+!.vscode/tasks.json    # 编译任务配置
+!.vscode/launch.json   # 调试配置
+!.vscode/settings.json # 项目通用设置
+!.vscode/c_cpp_properties.json # 语法配置
+.vs/                   # Visual Studio 缓存目录
+.idea/                 # CLion/IntelliJ 配置目录
+*.suo                  # Visual Studio 解决方案用户选项
+*.sln.docstates        # Visual Studio 状态文件
+*.sdf                  # Visual Studio 数据库文件
+.DS_Store              # macOS 系统文件
+Thumbs.db              # Windows 缩略图缓存
+*.swp                  # Vim 临时文件
+*.swo                  # Vim 交换文件
+
+# ========================== 系统/临时文件 ==========================
+core                   # Linux 核心转储文件
+core.*
+tmp/                   # 临时文件夹
+log/                   # 日志文件夹
+*.log                  # 单独的日志文件
+*.bak                  # 备份文件
+*~                     # 临时备份文件（如 vim 生成）
+
+# ========================== 可选：自定义忽略 ==========================
+# 如果有其他临时目录/文件，可添加在这里
+# 示例：
+# /docs/_build/        # 文档构建产物
+# /test/coverage/      # 测试覆盖率报告
+# *.tmp                # 自定义临时文件
