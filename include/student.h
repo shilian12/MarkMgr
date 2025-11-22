@@ -1,8 +1,8 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#define COURSE_COUNT 3
-#define STUDENT_COUNT 5
+#define COURSE_COUNT 6
+#define STUDENT_COUNT 10
 
 typedef struct
 {
