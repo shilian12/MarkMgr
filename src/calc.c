@@ -25,9 +25,30 @@ void calcAll(StudentDB *db)
 
 void sortByTotal(StudentDB *db)
 {
-    // TODO: C、D 负责
+    if (db == NULL || db->count <= 1)
+    {
+        return;
+    }
+    printf("正在按总分从高到低排序...\n");
+    int n = db->count;
+    int swapped;
+    do
+    {
+        swapped = 0;
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (db->stu[i].total < db->stu[i + 1].total)
+            {
+                Student temp = db->stu[i];
+                db->stu[i] = db->stu[i + 1];
+                db->stu[i + 1] = temp;
+                swapped = 1;
+            }
+        }
+        n--;
+    } while (swapped);
+    printf("排序完成！\n");
 }
-
 void courseAnalysis(const StudentDB *db)
 {
     // TODO: C、D 负责
